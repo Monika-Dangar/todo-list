@@ -1,0 +1,162 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.header {
+  background-color: #f4f4f4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.addItems {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.textBar {
+  margin-right: 2%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.textBar:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  margin: 2rem;
+}
+
+.itemCard {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.taskCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px;
+  background-color: #e8e8e8;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 4px;
+  margin-left: 1%;
+}
+
+.taskText.completed {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.taskText {
+  margin-right: 2%;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.addBtn,
+.deleteBtn,
+.editBtn,
+.doneBtn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.addBtn {
+  background-color: #4caf50;
+}
+
+.editBtn {
+  background-color: yellowgreen;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+}
+
+.addBtn:hover,
+.deleteBtn:hover,
+.editBtn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.addBtn:hover {
+  background-color: #2f7732;
+}
+
+.deleteBtn:hover {
+  background-color: #d32f2f;
+}
+
+.editBtn:hover {
+  background-color: rgb(100, 133, 34);
+}
+
+.taskComplete {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #4caf50;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .taskCard {
+    width: 90vw;
+  }
+
+  .textBar {
+    width: 80%;
+  }
+
+  .btnContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addBtn,
+  .deleteBtn,
+  .editBtn,
+  .doneBtn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
